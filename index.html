@@ -1,12 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Blog</title>
 </head>
+
 <body>
-    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Casa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Imagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artigos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Redes sociais
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                            <li><a class="dropdown-item" href="#">Facebook</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Linkedin</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images4.alphacoders.com/810/thumb-1920-81006.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://s1.1zoom.me/b5050/47/New_Zealand_Scenery_Coast_Sunrises_and_sunsets_515843_1920x1080.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.10wallpaper.com/wallpaper/1920x1080/1306/golden_gate_bridge_san_francisco-Nature_Landscape_HD_wallpaper_1920x1080.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://wallpaperaccess.com/full/3352685.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEuJg_6t-4M0-xngbzKSIM4Bqzlg0ru7LDq_DQ6PKBXLmOy-iZ4YQzX9GHA_-W9_PQ_I&usqp=CAU"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 d-flex align-items-center">
+            <h2 class="text-center mb-5">Artigos</h2>
+
+            <div class="col-md-6">
+                <img src="https://www.wallpapertip.com/wmimgs/27-277094_wallpaper-de-paisagens-de-praia-nice-background-for.jpg" class="w-100" alt="">
+            </div>
+
+            <div class="col-md-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eaque quo. Cum, necessitatibus
+                assumenda rem optio enim eos nam temporibus hic nostrum quidem neque porro non culpa vel molestias eum.
+                Debitis tempora autem ullam rem repudiandae corporis animi, sunt sapiente natus ipsum consectetur
+                expedita delectus ipsam omnis architecto provident nulla exercitationem dicta culpa modi possimus est
+                cupiditate distinctio! Ipsam laudantium qui aliquid, obcaecati et iste, illo quo excepturi cupiditate
+                hic nam soluta rem voluptas! Rem excepturi aliquid nemo iusto reiciendis officiis, minima dolorum
+                repellat dicta vel, repellendus exercitationem nam incidunt tenetur saepe voluptatibus commodi rerum
+                perspiciatis sit vero laboriosam reprehenderit corporis! Itaque maxime, sunt, eligendi eum ea ad, et
+                voluptate voluptas culpa libero beatae quas praesentium consequuntur delectus necessitatibus qui
+                perferendis quo quia nulla voluptatibus a ullam? Exercitationem vero, quibusdam, voluptatibus blanditiis
+                minus ipsum et mollitia enim nostrum commodi alias adipisci eveniet aut. Vel dicta eligendi magnam
+                nihil, aut magni veniam asperiores aspernatur vero facere. Omnis laborum nihil, esse eaque culpa quam
+                earum maxime illo, voluptas labore ex, ea nostrum sequi consectetur at qui neque aliquam iure blanditiis
+                reprehenderit. Numquam nesciunt excepturi quas cum fuga repudiandae, obcaecati ratione quam harum
+                accusantium corporis libero cupiditate veritatis placeat ab aperiam dolore eos!
+            </div>
+        </div>
+
+        <div class="row mt-5 mb-5 d-flex justify-content-center">
+            <h2 class="text-center mb-5">Contato</h2>
+            <div class="col-md-6">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Assunto</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-success text-center">Enviar</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
